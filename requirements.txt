@@ -1,7 +1,0 @@
-# requirements.txt for HRMS React/Vite project (for deployment helpers)
-# If you use Python scripts for deployment or automation, add them here.
-# For a pure JS/React project, this file is not required, but included for completeness.
-
-# Example (remove if not using Python):
-# requests
-# python-dotenv
