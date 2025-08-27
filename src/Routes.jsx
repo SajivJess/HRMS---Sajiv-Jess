@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
+import { BrowserRouter, Routes as RouterRoutes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import NotFound from "pages/NotFound";
@@ -16,8 +16,8 @@ const Routes = () => {
       <ErrorBoundary>
       <ScrollToTop />
       <RouterRoutes>
-        {/* Define your route here */}
-        <Route path="/" element={<AdminDashboard />} />
+        {/* Redirect root to multi-portal-login */}
+        <Route path="/" element={<Navigate to="/multi-portal-login" replace />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/attendance-tracking" element={<AttendanceTracking />} />
         <Route path="/multi-portal-login" element={<MultiPortalLogin />} />
